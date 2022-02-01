@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <sdf version="1.6">
   <model name="gps">
     <link name="link">
@@ -15,19 +15,6 @@
           <izz>1e-05</izz>
         </inertia>
       </inertial>
-      <visual name="visual">
-        <geometry>
-          <cylinder>
-            <radius>0.01</radius>
-            <length>0.002</length>
-          </cylinder>
-        </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-          </script>
-        </material>
-      </visual>
       <sensor name="gps" type="gps">
         <pose>0 0 0 0 0 0</pose>
         <update_rate>5.0</update_rate>
