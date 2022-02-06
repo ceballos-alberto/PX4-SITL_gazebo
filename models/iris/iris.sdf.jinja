@@ -45,8 +45,8 @@
       <gravity>1</gravity>
       <velocity_decay/>
     </link>
-    <link name='/cam_1_link'>
-      <pose>0 0 0 0 0 0</pose>
+    <link name='cam_1_link'>
+      <pose>0.45 0.05 0.1 0.0 0.0 0.0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -59,9 +59,9 @@
           <izz>1e-05</izz>
         </inertia>
       </inertial>
-      <sensor name='/cam_1_link' type='camera'>
+      <sensor name='cam_1_link' type='camera'>
         <update_rate>15</update_rate>
-        <camera name='/cam_1_link'>
+        <camera name='cam_1_link'>
           <horizontal_fov>1.57</horizontal_fov>
           <image>
             <width>1280</width>
@@ -79,17 +79,16 @@
           <cameraName>sensors/cam_1_link</cameraName>
           <imageTopicName>image</imageTopicName>
           <cameraInfoTopicName>info</cameraInfoTopicName>
-          <frameName>/cam_1_link</frameName>
+          <frameName>cam_1_link</frameName>
         </plugin>
       </sensor>
     </link>
-    <joint name='/cam_1_joint' type='fixed'>
-      <child>/cam_1_link</child>
+    <joint name='cam_1_joint' type='fixed'>
+      <child>cam_1_link</child>
       <parent>base_link</parent>
-      <pose>-0.25 0.05 0.1 0.0 0.0 3.14</pose>
     </joint>
-    <link name='/cam_2_link'>
-      <pose>0 0 0 0 0 0</pose>
+    <link name='cam_2_link'>
+      <pose>0.45 -0.05 0.1 0.0 0.0 0.0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -102,9 +101,9 @@
           <izz>1e-05</izz>
         </inertia>
       </inertial>
-      <sensor name='/cam_2_link' type='camera'>
+      <sensor name='cam_2_link' type='camera'>
         <update_rate>15</update_rate>
-        <camera name='/cam_2_link'>
+        <camera name='cam_2_link'>
           <horizontal_fov>1.57</horizontal_fov>
           <image>
             <width>1280</width>
@@ -122,17 +121,16 @@
           <cameraName>sensors/cam_2_link</cameraName>
           <imageTopicName>image</imageTopicName>
           <cameraInfoTopicName>info</cameraInfoTopicName>
-          <frameName>/cam_2_link</frameName>
+          <frameName>cam_2_link</frameName>
         </plugin>
       </sensor>
     </link>
-    <joint name='/cam_2_joint' type='fixed'>
-      <child>/cam_2_link</child>
+    <joint name='cam_2_joint' type='fixed'>
+      <child>cam_2_link</child>
       <parent>base_link</parent>
-      <pose>-0.25 -0.05 0.1 0.0 0.0 3.14</pose>
     </joint>
-    <link name='/cam_3_link'>
-      <pose>0 0 0 0 0 0</pose>
+    <link name='cam_3_link'>
+      <pose>-1.2 0.0 0.5 0.0 0.2 0.0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -145,9 +143,9 @@
           <izz>1e-05</izz>
         </inertia>
       </inertial>
-      <sensor name='/cam_3_link' type='camera'>
+      <sensor name='cam_3_link' type='camera'>
         <update_rate>15</update_rate>
-        <camera name='/cam_3_link'>
+        <camera name='cam_3_link'>
           <horizontal_fov>1.75</horizontal_fov>
           <image>
             <width>1280</width>
@@ -165,14 +163,13 @@
           <cameraName>sensors/cam_3_link</cameraName>
           <imageTopicName>image</imageTopicName>
           <cameraInfoTopicName>info</cameraInfoTopicName>
-          <frameName>/cam_3_link</frameName>
+          <frameName>cam_3_link</frameName>
         </plugin>
       </sensor>
     </link>
-    <joint name='/cam_3_joint' type='fixed'>
-      <child>/cam_3_link</child>
+    <joint name='cam_3_joint' type='fixed'>
+      <child>cam_3_link</child>
       <parent>base_link</parent>
-      <pose>1.2 0.0 0.5 0.0 0.2 3.14</pose>
     </joint>
     <link name='/imu_link'>
       <pose>0 0 0 0 0 0</pose>
