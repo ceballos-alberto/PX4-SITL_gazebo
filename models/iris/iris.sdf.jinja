@@ -45,6 +45,135 @@
       <gravity>1</gravity>
       <velocity_decay/>
     </link>
+    <link name='/cam_1_link'>
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.005</mass>
+        <inertia>
+          <ixx>1e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1e-05</iyy>
+          <iyz>0</iyz>
+          <izz>1e-05</izz>
+        </inertia>
+      </inertial>
+      <sensor name='/cam_1_link' type='camera'>
+        <update_rate>15</update_rate>
+        <camera name='/cam_1_link'>
+          <horizontal_fov>1.57</horizontal_fov>
+          <image>
+            <width>1280</width>
+            <height>720</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <plugin name="camera_plugin" filename="libgazebo_ros_camera.so">
+          <alwaysOn>true</alwaysOn>
+          <updateRate>15</updateRate>
+          <cameraName>sensors/cam_1_link</cameraName>
+          <imageTopicName>image</imageTopicName>
+          <cameraInfoTopicName>info</cameraInfoTopicName>
+          <frameName>/cam_1_link</frameName>
+        </plugin>
+      </sensor>
+    </link>
+    <joint name='/cam_1_joint' type='fixed'>
+      <child>/cam_1_link</child>
+      <parent>base_link</parent>
+      <pose>-0.25 0.05 0.1 0.0 0.0 3.14</pose>
+    </joint>
+    <link name='/cam_2_link'>
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.005</mass>
+        <inertia>
+          <ixx>1e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1e-05</iyy>
+          <iyz>0</iyz>
+          <izz>1e-05</izz>
+        </inertia>
+      </inertial>
+      <sensor name='/cam_2_link' type='camera'>
+        <update_rate>15</update_rate>
+        <camera name='/cam_2_link'>
+          <horizontal_fov>1.57</horizontal_fov>
+          <image>
+            <width>1280</width>
+            <height>720</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <plugin name="camera_plugin" filename="libgazebo_ros_camera.so">
+          <alwaysOn>true</alwaysOn>
+          <updateRate>15</updateRate>
+          <cameraName>sensors/cam_2_link</cameraName>
+          <imageTopicName>image</imageTopicName>
+          <cameraInfoTopicName>info</cameraInfoTopicName>
+          <frameName>/cam_2_link</frameName>
+        </plugin>
+      </sensor>
+    </link>
+    <joint name='/cam_2_joint' type='fixed'>
+      <child>/cam_2_link</child>
+      <parent>base_link</parent>
+      <pose>-0.25 -0.05 0.1 0.0 0.0 3.14</pose>
+    </joint>
+    <link name='/cam_3_link'>
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.005</mass>
+        <inertia>
+          <ixx>1e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1e-05</iyy>
+          <iyz>0</iyz>
+          <izz>1e-05</izz>
+        </inertia>
+      </inertial>
+      <sensor name='/cam_3_link' type='camera'>
+        <update_rate>15</update_rate>
+        <camera name='/cam_3_link'>
+          <horizontal_fov>1.75</horizontal_fov>
+          <image>
+            <width>1280</width>
+            <height>720</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <plugin name="camera_plugin" filename="libgazebo_ros_camera.so">
+          <alwaysOn>true</alwaysOn>
+          <updateRate>15</updateRate>
+          <cameraName>sensors/cam_3_link</cameraName>
+          <imageTopicName>image</imageTopicName>
+          <cameraInfoTopicName>info</cameraInfoTopicName>
+          <frameName>/cam_3_link</frameName>
+        </plugin>
+      </sensor>
+    </link>
+    <joint name='/cam_3_joint' type='fixed'>
+      <child>/cam_3_link</child>
+      <parent>base_link</parent>
+      <pose>1.2 0.0 0.5 0.0 0.2 3.14</pose>
+    </joint>
     <link name='/imu_link'>
       <pose>0 0 0 0 0 0</pose>
       <inertial>
