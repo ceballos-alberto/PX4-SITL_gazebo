@@ -73,13 +73,13 @@
       <include>
          	<uri>model://hatchback_red</uri>
 	<name>car_2</name>
-	<pose>6 2.75 0 0 0 1.57</pose>
+	<pose>6 3.5 0 0 0 1.57</pose>
       </include>
       
       <include>
          	<uri>model://hatchback_red</uri>
 	<name>car_3</name>
-	<pose>6 -2.75 0 0 0 1.57</pose>
+	<pose>6 -3.5 0 0 0 1.57</pose>
       </include>
 
       <!-- Obstacles = cars -->
